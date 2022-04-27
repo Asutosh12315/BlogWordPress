@@ -30,8 +30,13 @@
      wp_enqueue_style('ju_custom', $uri.'/assets/css/custom.css'); 
         
  /* finding all js*/
-     wp_register_script('ju_plugins', $uri.'/assets/js/plugin.js');
-    
+     wp_register_script('ju_plugins', $uri.'/assets/js/plugin.js',[],false,true);
+     wp_register_script('ju_functions', $uri.'/assets/js/functions.js',[],false,true);
+
+     wp_enqueue_script('jquery'); 
+     wp_enqueue_script('ju_plugins', $uri.'/assets/js/plugin.js'); 
+     wp_enqueue_script('ju_functions', $uri.'/assets/js/functions.js'); 
+
 }
 
 ?>
